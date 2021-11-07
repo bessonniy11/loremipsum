@@ -638,17 +638,17 @@ body.ie ._ibg img {
 
 .brands__item img, .up__btn img {
   transition: all 0.3s ease 0s;
-  filter: grayscale(1);
-  -webkit-filter: grayscale(1);
-  -moz-filter: grayscale(1);
-  -o-filter: grayscale(1);
+  filter: invert(1) sepia(100%) saturate(0%);
+  -webkit-filter: invert(1) sepia(100%) saturate(0%);
+  -moz-filter: invert(1) sepia(100%) saturate(0%);
+  -o-filter: invert(1) sepia(100%) saturate(0%);
 }
 
-.brands__item img:hover {
-  filter: grayscale(0);
-  -webkit-filter: grayscale(0);
-  -moz-filter: grayscale(0);
-  -o-filter: grayscale(0);
+.brands__item svg:hover, .brands__item img:hover {
+  filter: invert(1) sepia(100%) saturate(1000%);
+  -webkit-filter: invert(1) sepia(100%) saturate(1000%);
+  -moz-filter: invert(1) sepia(100%) saturate(1000%);
+  -o-filter: invert(1) sepia(100%) saturate(1000%);
 }
 
 #map {
@@ -1083,6 +1083,7 @@ body.ie ._ibg img {
 }
 .footer-body__item {
   width: 40%;
+  margin-right: 10px;
 }
 @media (max-width: 767.98px) {
   .footer-body__item {
@@ -1108,6 +1109,32 @@ body.ie ._ibg img {
   font-size: 26px;
   color: #17A11D;
   font-weight: 300;
+}
+.footer-body__logo-desc span:first-child {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+@media (min-width: 767.98px) {
+  .footer-body__logo-desc span:first-child {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer-body__logo-desc span:nth-child(2) {
+    display: none;
+  }
+}
+.footer-body .footer-body__logo-desc__bet-span {
+  font-size: 26px;
+  color: #17A11D;
+  font-weight: 300;
+}
+@media (min-width: 767.98px) {
+  .footer-body .footer-body__logo-desc__bet-span {
+    display: none;
+  }
 }
 .footer-body__autor {
   color: #cccccc;
@@ -1399,7 +1426,6 @@ body.ie ._ibg img {
   position: relative;
 }
 .brands__body {
-  padding: 0 40px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1407,11 +1433,29 @@ body.ie ._ibg img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  width: 100px;
+  height: 50px;
+  margin-right: 15px;
+  margin-bottom: 30px;
+}
+.brands__item:last-child {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 767.98px) {
+  .brands__item {
+    width: 75px;
+    height: 25px;
+    padding: 10px;
+  }
 }
 .brands__item img {
-  max-width: 100px;
   max-width: 100%;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+}
+.brands__item svg {
+  width: 110px;
+  height: 60px;
+  fill: #fff;
 }
